@@ -1,0 +1,226 @@
+/* ===========================
+   BASE / RESET
+=========================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4faff;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cyan;
+    padding: 20px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+h1 {
+    color: darkblue;
+    font-weight: bold;
+    font-size: 32px;
+    margin: 0;
+}
+
+h2 {
+    color: darkcyan;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+/* ===========================
+   LAYOUT PRINCIPAL
+=========================== */
+#corpo {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background: #f4faff;
+}
+
+/* Colunas laterais */
+.colunas {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Divisões verticais */
+.divisorias {
+    width: 2px;
+    background-color: #ccc;
+    border: none;
+    margin: 0;
+}
+
+/* ===========================
+   FORMULÁRIO DE CADASTRO
+=========================== */
+#cadastroMissao {
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#cadastroMissao label {
+    font-weight: bold;
+}
+
+#cadastroMissao input,
+#cadastroMissao select {
+    width: 85%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    font-size: 15px;
+}
+
+/* Botões */
+.botoes {
+    background-color: darkblue;
+    padding: 15px 25px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: .2s;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.botoes:hover {
+    background-color: #001a66;
+}
+
+#criarmissao {
+    padding: 20px 32px;
+}
+
+/* ===========================
+   MISSÕES REGISTRADAS
+=========================== */
+#missoesRegistradas {
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+#listaMissoes {
+    width: 90%;
+}
+
+#listaMissoes div {
+    border: 1px solid #bcd;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 8px;
+    background: #f9fdff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+#listaMissoes div:hover {
+    transform: scale(1.01);
+}
+
+#missoesRegistradas select {
+    padding: 10px;
+    width: 60%;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+/* Botões dentro das missões */
+#listaMissoes button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#listaMissoes button:hover {
+    opacity: 0.85;
+}
+
+#listaMissoes button:not([style]) {
+    /* botões normais */
+    background: darkcyan;
+    color: white;
+}
+
+#listaMissoes button[style*="background: red"] {
+    background: rgb(216, 36, 36);
+}
+
+/* Missão concluída */
+#listaMissoes .concluida {
+    background: #d7ffda !important;
+    border-color: #7ad87f !important;
+}
+
+/* ===========================
+   RANKING
+=========================== */
+#ranking {
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#listaRanking {
+    width: 80%;
+    padding-left: 0;
+}
+
+#listaRanking li {
+    list-style: none;
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#listaRanking li:last-child {
+    border-bottom: none;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+@media (max-width: 900px) {
+    #corpo {
+        flex-direction: column;
+    }
+
+    .divisorias {
+        height: 2px;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .colunas {
+        width: 100%;
+    }
+
+    #listaMissoes div {
+        width: 95%;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="PAC.js" defer></script>
+    <title>Sistema de missões</title>
+</head>
+
+<body>
+    <header>
+        <h1>Registrador de missões</h1>
+    </header>
+
+    <section id="corpo">
+
+        <!-- CADASTRO -->
+        <div id="cadastroMissao" class="colunas">
+            <h2>Criar Missão</h2>
+
+            <label>Objetivo da missão:</label>
+            <input type="text" id="objetivo">
+
+            <br><br>
+
+            <label>Dificuldade da missão:</label>
+            <select id="dificuldade" class="inputs">
+                <option value="facil">Fácil - 50XP</option>
+                <option value="medio">Médio - 200XP</option>
+                <option value="dificil">Difícil - 500XP</option>
+            </select>
+
+            <br><br>
+
+            <label>Defina data e hora limite da missão:</label>
+            <input type="datetime-local" id="dataLimite">
+
+            <br><br>
+
+            <label>Jogador responsável:</label>
+            <input type="text" id="jogador">
+
+            <br><br>
+
+            <input type="button" value="Criar missão" class="botoes" id="criarmissao">
+        </div>
+
+        <hr class="divisorias">
+
+        <!-- LISTA DE MISSÕES -->
+        <div id="missoesRegistradas" class="colunas">
+            <h2>Missões Registradas</h2>
+
+            <label>Filtrar por dificuldade:</label>
+            <select id="filtro">
+                <option value="todas">Todas</option>
+                <option value="facil">Fácil</option>
+                <option value="medio">Médio</option>
+                <option value="dificil">Difícil</option>
+            </select>
+
+            <div id="listaMissoes"></div>
+        </div>
+
+        <hr class="divisorias">
+
+        <!-- RANKING -->
+        <div id="ranking" class="colunas">
+            <h2>Ranking dos jogadores</h2>
+            <ol id="listaRanking"></ol>
+        </div>
+
+    </section>
+</body>
+</html>
